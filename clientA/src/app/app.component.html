@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <button class="btn btn-primary" (click)="load10MoviesAction()">Carica 10 film</button>
+  <button class="btn btn-info" (click)="load10Rest()">Carica 10 ristoranti di brooklyn</button>
+</nav>
+
+<div *ngFor="let r of resultsR">
+  <hr>
+  <h1>{{r.borough}}</h1>
+  <p>{{r.name}}</p>
+  <p>{{r.restaurant_id}}</p>
+</div>
+
+<!--
+<div class="card-columns">
+  <div *ngFor="let movie of resultsA" class="card">
+
+    <div *ngIf="photoURL(movie.poster) == false"><div class="alert alert-warning" role="alert"><strong>Warning!</strong> Manca immagine del poster</div></div>
+    <div *ngIf="photoURL(movie.poster) != false"><img class="img-img-top" [src]="photoURL(movie.poster)"></div>
+
+    <div class="card-body text-center">
+      <h4 class="card-title">{{movie.title}}</h4>
+      <p class="card-text">{{movie.fullplot}}</p>
+</div>
+-->
